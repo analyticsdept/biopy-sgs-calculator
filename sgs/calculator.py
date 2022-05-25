@@ -1,4 +1,4 @@
-from math import factorial, floor, log
+from math import e, factorial, floor, log
 from .result import SGSResult
 
 class SGSCalculator():
@@ -10,10 +10,9 @@ class SGSCalculator():
         pass
 
     def _poisson(self, expected_success, mean_success):
-        _e = 2.71828
         
         return (
-            (_e ** (mean_success*-1)) 
+            (e ** (mean_success*-1)) 
             * (mean_success ** expected_success) 
             / factorial(expected_success)
         )
